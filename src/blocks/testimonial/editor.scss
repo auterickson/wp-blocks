@@ -1,0 +1,20 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// editor.scss
+@import "/src/scss/variables";
+.wp-block-ae-testimonial{
+	border: 2px dashed #f00;
+	textarea, input[type=text] {
+		background-color: $bg-light;
+	}
+	.photo img{
+		pointer-events:all;
+		cursor: pointer;
+
+	}
+
+}
