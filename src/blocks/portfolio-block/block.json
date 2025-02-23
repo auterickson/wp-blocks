@@ -21,6 +21,21 @@
 		"avatarURL": {
 			"type": "string",
 			"default": "http://place-hold.it/75"
-		}
+		},
+		"description": {
+			"type": "string",
+			"source": "html",
+			"selector": ".description"
+		},
+		"tags": {
+			"type": "string",
+			"default": ""
+		},
+		"name": {
+		"type": "string",
+		"source":"html",
+		"default": ""
+	}
+
 	}
 }

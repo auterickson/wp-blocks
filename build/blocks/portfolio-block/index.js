@@ -8,7 +8,7 @@
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"ae/portfolio-block","version":"0.1.0","title":"Portfolio Block","category":"design","icon":"portfolio","description":"build your portfolio with portfolio blocks","example":{},"supports":{"html":false},"textdomain":"portfolio-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["portfolio","ae"],"attributes":{"avatarURL":{"type":"string","default":"http://place-hold.it/75"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"ae/portfolio-block","version":"0.1.0","title":"Portfolio Block","category":"design","icon":"portfolio","description":"build your portfolio with portfolio blocks","example":{},"supports":{"html":false},"textdomain":"portfolio-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["portfolio","ae"],"attributes":{"avatarURL":{"type":"string","default":"http://place-hold.it/75"},"description":{"type":"string","source":"html","selector":".description"},"tags":{"type":"string","default":""},"name":{"type":"string","source":"html","default":""}}}');
 
 /***/ }),
 
@@ -18,7 +18,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
   \********************************************/
 /***/ (() => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/autumn/high-pulp-blocks/src/blocks/portfolio-block/edit.js: Identifier 'MediaUpload' has already been declared. (32:30)\n\n\u001b[0m \u001b[90m 30 |\u001b[39m \u001b[90m * @return {Element} Element to render.\u001b[39m\n \u001b[90m 31 |\u001b[39m \u001b[90m */\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m \u001b[36mimport\u001b[39m { \u001b[33mRichText\u001b[39m\u001b[33m,\u001b[39m \u001b[33mPlainText\u001b[39m\u001b[33m,\u001b[39m \u001b[33mMediaUpload\u001b[39m\u001b[33m,\u001b[39m \u001b[33mMediaUploadCheck\u001b[39m } \u001b[36mfrom\u001b[39m \u001b[32m'@wordpress/block-editor'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m \u001b[36mimport\u001b[39m { \u001b[33mSelectControl\u001b[39m} \u001b[36mfrom\u001b[39m \u001b[32m\"@wordpress/components\"\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m \u001b[36mimport\u001b[39m \u001b[33mStarRating\u001b[39m \u001b[36mfrom\u001b[39m \u001b[32m\"../../components/StarRating\"\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m \u001b[90m//export default function Edit(props)\u001b[39m\u001b[0m\n    at constructor (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:360:19)\n    at JSXParserMixin.raise (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:3327:19)\n    at ScopeHandler.checkRedeclarationInScope (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:1555:19)\n    at ScopeHandler.declareName (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:1521:12)\n    at JSXParserMixin.declareNameFromIdentifier (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:7476:16)\n    at JSXParserMixin.checkIdentifier (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:7472:12)\n    at JSXParserMixin.checkLVal (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:7413:12)\n    at JSXParserMixin.finishImportSpecifier (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:13898:10)\n    at JSXParserMixin.parseImportSpecifier (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:14054:17)\n    at JSXParserMixin.parseNamedImportSpecifiers (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:14033:36)\n    at JSXParserMixin.parseImportSpecifiersAndAfter (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:13875:37)\n    at JSXParserMixin.parseImport (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:13868:17)\n    at JSXParserMixin.parseStatementContent (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12514:27)\n    at JSXParserMixin.parseStatementLike (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12406:17)\n    at JSXParserMixin.parseModuleItem (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12383:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12960:36)\n    at JSXParserMixin.parseBlockBody (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12953:10)\n    at JSXParserMixin.parseProgram (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12280:10)\n    at JSXParserMixin.parseTopLevel (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12270:25)\n    at JSXParserMixin.parse (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:14120:10)\n    at parse (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:14154:38)\n    at parser (/home/autumn/high-pulp-blocks/node_modules/@babel/core/lib/parser/index.js:41:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/home/autumn/high-pulp-blocks/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)\n    at normalizeFile.next (<anonymous>)\n    at run (/home/autumn/high-pulp-blocks/node_modules/@babel/core/lib/transformation/index.js:21:50)\n    at run.next (<anonymous>)\n    at transform (/home/autumn/high-pulp-blocks/node_modules/@babel/core/lib/transform.js:22:33)\n    at transform.next (<anonymous>)\n    at step (/home/autumn/high-pulp-blocks/node_modules/gensync/index.js:261:32)\n    at /home/autumn/high-pulp-blocks/node_modules/gensync/index.js:273:13\n    at async.call.result.err.err (/home/autumn/high-pulp-blocks/node_modules/gensync/index.js:223:11)");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/autumn/high-pulp-blocks/src/blocks/portfolio-block/edit.js: Identifier 'MediaUpload' has already been declared. (32:30)\n\n\u001b[0m \u001b[90m 30 |\u001b[39m \u001b[90m * @return {Element} Element to render.\u001b[39m\n \u001b[90m 31 |\u001b[39m \u001b[90m */\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m \u001b[36mimport\u001b[39m { \u001b[33mRichText\u001b[39m\u001b[33m,\u001b[39m \u001b[33mPlainText\u001b[39m\u001b[33m,\u001b[39m \u001b[33mMediaUpload\u001b[39m\u001b[33m,\u001b[39m \u001b[33mMediaUploadCheck\u001b[39m } \u001b[36mfrom\u001b[39m \u001b[32m'@wordpress/block-editor'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m \u001b[36mimport\u001b[39m { \u001b[33mSelectControl\u001b[39m} \u001b[36mfrom\u001b[39m \u001b[32m\"@wordpress/components\"\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m \u001b[90m//export default function Edit(props)\u001b[39m\n \u001b[90m 35 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[36mfunction\u001b[39m \u001b[33mEdit\u001b[39m( {attributes\u001b[33m,\u001b[39m setAttributes} ) {\u001b[0m\n    at constructor (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:360:19)\n    at JSXParserMixin.raise (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:3327:19)\n    at ScopeHandler.checkRedeclarationInScope (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:1555:19)\n    at ScopeHandler.declareName (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:1521:12)\n    at JSXParserMixin.declareNameFromIdentifier (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:7476:16)\n    at JSXParserMixin.checkIdentifier (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:7472:12)\n    at JSXParserMixin.checkLVal (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:7413:12)\n    at JSXParserMixin.finishImportSpecifier (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:13898:10)\n    at JSXParserMixin.parseImportSpecifier (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:14054:17)\n    at JSXParserMixin.parseNamedImportSpecifiers (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:14033:36)\n    at JSXParserMixin.parseImportSpecifiersAndAfter (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:13875:37)\n    at JSXParserMixin.parseImport (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:13868:17)\n    at JSXParserMixin.parseStatementContent (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12514:27)\n    at JSXParserMixin.parseStatementLike (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12406:17)\n    at JSXParserMixin.parseModuleItem (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12383:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12960:36)\n    at JSXParserMixin.parseBlockBody (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12953:10)\n    at JSXParserMixin.parseProgram (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12280:10)\n    at JSXParserMixin.parseTopLevel (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:12270:25)\n    at JSXParserMixin.parse (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:14120:10)\n    at parse (/home/autumn/high-pulp-blocks/node_modules/@babel/parser/lib/index.js:14154:38)\n    at parser (/home/autumn/high-pulp-blocks/node_modules/@babel/core/lib/parser/index.js:41:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/home/autumn/high-pulp-blocks/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)\n    at normalizeFile.next (<anonymous>)\n    at run (/home/autumn/high-pulp-blocks/node_modules/@babel/core/lib/transformation/index.js:21:50)\n    at run.next (<anonymous>)\n    at transform (/home/autumn/high-pulp-blocks/node_modules/@babel/core/lib/transform.js:22:33)\n    at transform.next (<anonymous>)\n    at step (/home/autumn/high-pulp-blocks/node_modules/gensync/index.js:261:32)\n    at /home/autumn/high-pulp-blocks/node_modules/gensync/index.js:273:13\n    at async.call.result.err.err (/home/autumn/high-pulp-blocks/node_modules/gensync/index.js:223:11)");
 
 /***/ }),
 
@@ -110,7 +110,10 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Element} Element to render.
  */
 
-function save() {
+
+function save({
+  attributes
+}) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)(),
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -119,25 +122,21 @@ function save() {
         src: attributes.avatarURL,
         alt: "photo of " + attributes.author
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "card-content",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "tags",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-          className: "tags",
-          children: "tag"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-          className: "tags",
-          children: "tag"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-        className: "description",
-        children: "This is my project and here is some basic information on it. I really like it!"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-        href: "#",
-        className: "btn",
-        children: "Check It Out"
-      })]
+    }), attributes.tags && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      className: "card-tags",
+      children: attributes.tags
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+      tagName: "h3",
+      className: "card-name",
+      value: attributes.name
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+      tagName: "p",
+      className: "card-description",
+      value: attributes.description
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+      href: "#",
+      className: "btn",
+      children: "Check It Out"
     })]
   });
 }

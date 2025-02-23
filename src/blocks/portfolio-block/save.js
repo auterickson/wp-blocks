@@ -15,21 +15,25 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {Element} Element to render.
  */
-export default function save() {
+import { RichText, PlainText } from '@wordpress/block-editor';
+export default function save({attributes}) {
 	return (
 		<div {...useBlockProps()}>
 			<div className="photo">
 				<img src={attributes.avatarURL} alt={"photo of " + attributes.author}/>
 			</div>
-			<div className="card-content">
-				<div className="tags">
-					<span className="tags">tag</span>
-					<span className="tags">tag</span>
-				</div>
-				<p className="description">This is my project and here is some basic information on it. I really like
-					it!</p>
+			{attributes.tags && (
+				<p className="card-tags">{attributes.tags}</p>
+			)}
+
+
+			<RichText.Content tagName="h3" className="card-name" value={attributes.name} />
+
+
+			<RichText.Content tagName="p" className="card-description" value={attributes.description} />
+
 				<a href="#" className="btn">Check It Out</a>
-			</div>
+
 		</div>
 	);
 }

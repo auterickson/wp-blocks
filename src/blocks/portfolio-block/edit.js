@@ -30,7 +30,7 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 import { RichText, PlainText, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
-import { SelectControl} from "@wordpress/components";
+import {SelectControl, TextControl} from "@wordpress/components";
 //export default function Edit(props)
 export default function Edit( {attributes, setAttributes} ) {
 	return (
@@ -51,15 +51,29 @@ export default function Edit( {attributes, setAttributes} ) {
 				</MediaUploadCheck>
 
 			</div>
-			<div class="card-content">
-				<div class="tags">
-					<span class="tags">tag</span>
-					<span class="tags">tag</span>
-				</div>
-				<p class="description">This is my project and here is some basic information on it. I really like
-					it!</p>
-				<a href="#" class="btn">Check It Out</a>
+
+			<TextControl
+				label={__('Tags', 'text-domain')}
+				value={attributes.tags}
+				onChange={(tags) => setAttributes({ tags })}
+				help={__('Comma-separated values', 'text-domain')}
+			/>
+
+			<RichText
+				tagName="h3"
+				placeholder={__('Enter Project Name', 'text-domain')}
+				value={attributes.name}
+				onChange={(name) => setAttributes({ name })}
+			/>
+
+				<RichText
+					className="description"
+					tagName="div"
+					placeholder={__('Enter description...', 'text-domain')}
+					value={attributes.description}
+						onChange={value => setAttributes({description:value})}
+				/>
+				<a href="#" className="btn">Check It Out</a>
 			</div>
-		</div>
 	);
 }
