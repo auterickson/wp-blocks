@@ -19,5 +19,11 @@
   "keywords": [
     "portfolio",
     "ae"
-  ]
+  ],
+  "attributes": {
+    "avatarURL": {
+      "type": "string",
+      "default": "http://place-hold.it/75"
+    }
+  }
 }
