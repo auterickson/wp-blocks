@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import {MediaUpload, MediaUploadCheck, useBlockProps} from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,16 +29,35 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+import { RichText, PlainText, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
+import { SelectControl} from "@wordpress/components";
+//export default function Edit(props)
+export default function Edit( {attributes, setAttributes} ) {
 	return (
 		<div { ...useBlockProps() }>
-			<img src="https://via.placeholder.com/300X200" alt="portfolio piece"/>
+			<div className="photo">
+				<MediaUploadCheck>
+					<MediaUpload
+						onSelect={(media) =>
+							setAttributes({'avatarURL': media.sizes.thumbnail.url})
+						}
+						allowedTypes={['image']}
+						render={({open}) => (
+							<img onClick={open}
+								 src={attributes.avatarURL}
+								 alt="choose image"/>
+						)}
+					/>
+				</MediaUploadCheck>
+
+			</div>
 			<div class="card-content">
 				<div class="tags">
 					<span class="tags">tag</span>
 					<span class="tags">tag</span>
 				</div>
-				<p class="description">This is my project and here is some basic information on it. I really like it!</p>
+				<p class="description">This is my project and here is some basic information on it. I really like
+					it!</p>
 				<a href="#" class="btn">Check It Out</a>
 			</div>
 		</div>

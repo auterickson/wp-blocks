@@ -18,7 +18,9 @@ import { useBlockProps } from '@wordpress/block-editor';
 export default function save() {
 	return (
 		<div {...useBlockProps()}>
-			<img src="https://via.placeholder.com/300X200" alt="portfolio piece"/>
+			<div className="photo">
+				<img src={attributes.avatarURL} alt={"photo of " + attributes.author}/>
+			</div>
 			<div className="card-content">
 				<div className="tags">
 					<span className="tags">tag</span>

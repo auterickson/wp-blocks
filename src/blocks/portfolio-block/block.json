@@ -16,5 +16,11 @@
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"viewScript": "file:./view.js",
-	"keywords": ["portfolio","ae"]
+	"keywords": ["portfolio","ae"],
+	"attributes": {
+		"avatarURL": {
+			"type": "string",
+			"default": "http://place-hold.it/75"
+		}
+	}
 }
