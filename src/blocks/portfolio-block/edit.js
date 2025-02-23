@@ -31,8 +31,16 @@ import './editor.scss';
  */
 export default function Edit() {
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Portfolio Block – hello from the editor!', 'portfolio-block' ) }
-		</p>
+		<div { ...useBlockProps() }>
+			<img src="https://via.placeholder.com/300X200" alt="portfolio piece"/>
+			<div class="card-content">
+				<div class="tags">
+					<span class="tags">tag</span>
+					<span class="tags">tag</span>
+				</div>
+				<p class="description">This is my project and here is some basic information on it. I really like it!</p>
+				<a href="#" class="btn">Check It Out</a>
+			</div>
+		</div>
 	);
 }
