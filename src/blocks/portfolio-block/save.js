@@ -17,8 +17,17 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save() {
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Portfolio Block – hello from the saved content!' }
-		</p>
+		<div {...useBlockProps()}>
+			<img src="https://via.placeholder.com/300X200" alt="portfolio piece"/>
+			<div className="card-content">
+				<div className="tags">
+					<span className="tags">tag</span>
+					<span className="tags">tag</span>
+				</div>
+				<p className="description">This is my project and here is some basic information on it. I really like
+					it!</p>
+				<a href="#" className="btn">Check It Out</a>
+			</div>
+		</div>
 	);
 }
