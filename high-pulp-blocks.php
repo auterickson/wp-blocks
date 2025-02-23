@@ -27,5 +27,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 function ae_high_pulp_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/high-pulp-blocks' );
 	register_block_type( __DIR__ . '/build/blocks/testimonial' );
+	register_block_type( __DIR__ . '/build/blocks/portfolio-block' );
 }
 add_action( 'init', 'ae_high_pulp_blocks_block_init' );
