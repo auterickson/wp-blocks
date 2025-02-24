@@ -26,9 +26,7 @@ export default function save({attributes}) {
 				<p className="card-tags">{attributes.tags}</p>
 			)}
 
-
 			<RichText.Content tagName="h3" className="card-name" value={attributes.name} />
-
 
 			<RichText.Content tagName="p" className="card-description" value={attributes.description} />
 
