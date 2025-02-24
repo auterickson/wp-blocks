@@ -8,7 +8,7 @@
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"ae/portfolio-block","version":"0.1.0","title":"Portfolio Block","category":"design","icon":"portfolio","description":"build your portfolio with portfolio blocks","example":{},"supports":{"html":false},"textdomain":"portfolio-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["portfolio","ae"],"attributes":{"avatarURL":{"type":"string","default":"http://place-hold.it/75"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"ae/portfolio-block","version":"0.1.0","title":"Portfolio Block","category":"design","icon":"portfolio","description":"build your portfolio with portfolio blocks","example":{},"supports":{"html":false},"textdomain":"portfolio-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["portfolio","ae"],"attributes":{"avatarURL":{"type":"string","default":"http://place-hold.it/75"},"description":{"type":"string","source":"html","selector":".description"},"tags":{"type":"string","default":""},"name":{"type":"string","source":"html","default":""}}}');
 
 /***/ }),
 
@@ -110,7 +110,10 @@ __webpack_require__.r(__webpack_exports__);
  * @return {Element} Element to render.
  */
 
-function save() {
+
+function save({
+  attributes
+}) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)(),
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -119,25 +122,21 @@ function save() {
         src: attributes.avatarURL,
         alt: "photo of " + attributes.author
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "card-content",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "tags",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-          className: "tags",
-          children: "tag"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-          className: "tags",
-          children: "tag"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-        className: "description",
-        children: "This is my project and here is some basic information on it. I really like it!"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-        href: "#",
-        className: "btn",
-        children: "Check It Out"
-      })]
+    }), attributes.tags && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      className: "card-tags",
+      children: attributes.tags
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+      tagName: "h3",
+      className: "card-name",
+      value: attributes.name
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+      tagName: "p",
+      className: "card-description",
+      value: attributes.description
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+      href: "#",
+      className: "btn",
+      children: "Check It Out"
     })]
   });
 }
