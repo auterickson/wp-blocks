@@ -32,48 +32,64 @@ import './editor.scss';
 import { RichText, PlainText, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 import {SelectControl, TextControl} from "@wordpress/components";
 //export default function Edit(props)
-export default function Edit( {attributes, setAttributes} ) {
+export default function Edit({ attributes, setAttributes }) {
+	const { projectURL, name, description, tags } = attributes;
+
 	return (
-		<div { ...useBlockProps() }>
+		<div {...useBlockProps({className: "is-editor"})}>
 			<div className="photo">
 				<MediaUploadCheck>
 					<MediaUpload
-						onSelect={(media) =>
-							setAttributes({'avatarURL': media.sizes.thumbnail.url})
-						}
+						onSelect={(media) => setAttributes({projectURL: media.sizes.thumbnail.url})}
 						allowedTypes={['image']}
 						render={({open}) => (
-							<img onClick={open}
-								 src={attributes.avatarURL}
-								 alt="choose image"/>
+							<div>
+								<img
+									onClick={() => {
+										console.log('Image clicked, opening media library...');
+										open();
+									}}
+									src={projectURL || 'http://place-hold.it/75'}
+									alt={__('Choose an image', 'portfolio-block')}
+								/>
+								<button onClick={() => {
+									console.log('Button clicked, opening media library...');
+									open();
+								}}>Open Media Library
+								</button>
+							</div>
 						)}
 					/>
 				</MediaUploadCheck>
-
 			</div>
 
-			<TextControl
-				label={__('Tags', 'text-domain')}
-				value={attributes.tags}
-				onChange={(tags) => setAttributes({ tags })}
-				help={__('Comma-separated values', 'text-domain')}
-			/>
-
-			<RichText
-				tagName="h3"
-				placeholder={__('Enter Project Name', 'text-domain')}
-				value={attributes.name}
-				onChange={(name) => setAttributes({ name })}
-			/>
+			<div className="card-text">
+				<RichText
+					tagName="h3"
+					className="card-name"
+					value={name}
+					onChange={(value) => setAttributes({name: value})}
+					placeholder={__('Enter portfolio item name', 'portfolio-block')}
+				/>
 
 				<RichText
-					className="description"
-					tagName="div"
-					placeholder={__('Enter description...', 'text-domain')}
-					value={attributes.description}
-						onChange={value => setAttributes({description:value})}
+					tagName="p"
+					className="card-tags"
+					value={tags}
+					onChange={(value) => setAttributes({tags: value})}
+					placeholder={__('Enter tags (e.g., HTML, CSS)', 'portfolio-block')}
 				/>
-				<a href="#" className="btn">Check It Out</a>
+
+				<RichText
+					tagName="p"
+					className="card-description"
+					value={description}
+					onChange={(value) => setAttributes({description: value})}
+					placeholder={__('Enter description of portfolio item', 'portfolio-block')}
+				/>
+
+
 			</div>
+		</div>
 	);
 }

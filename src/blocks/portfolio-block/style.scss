@@ -4,9 +4,82 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+@import "/src/scss/variables";
 
 .wp-block-ae-portfolio-block {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.portfolio-item {
+	position: relative;
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	width: 100%;
+	max-width: 350px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+	transform: translateY(-5px);
+}
+
+.photo {
+	width: 100%;
+	position: relative;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+/* Text overlay positioned at the bottom */
+.card-text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5); /* Slight transparency */
+	color: white;
+	padding: 20px;
+	text-align: left; /* Align text to the left */
+	transition: background 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start; /* Align items at the top */
+	align-items: flex-start; /* Align to the left side */
+	box-sizing: border-box; /* Prevent padding from affecting width/height */
+	max-height: 100%; /* Allow the content to take full height */
+	overflow: visible; /* Ensure no clipping */
+}
+
+/* Match text width to image width */
+.card-name {
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.card-description,
+.card-tags {
+	font-size: 1rem;
+	margin-bottom: 5px;
+}
+
+.card-description {
+	padding-top: 10px;
+}
+
+.card-tags {
+	font-size: 0.875rem;
+	color: #888;
+	text-transform: uppercase;
+	margin-top: 10px;
 }

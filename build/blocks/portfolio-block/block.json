@@ -21,23 +21,24 @@
     "ae"
   ],
   "attributes": {
-    "avatarURL": {
+    "projectURL": {
       "type": "string",
       "default": "http://place-hold.it/75"
-    },
-    "description": {
-      "type": "string",
-      "source": "html",
-      "selector": ".description"
-    },
-    "tags": {
-      "type": "string",
-      "default": ""
     },
     "name": {
       "type": "string",
       "source": "html",
-      "default": ""
+      "selector": ".card-name"
+    },
+    "description": {
+      "type": "string",
+      "source": "html",
+      "selector": ".card-description"
+    },
+    "tags": {
+      "type": "string",
+      "source": "html",
+      "selector": ".card-tags"
     }
   }
 }

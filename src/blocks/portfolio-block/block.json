@@ -18,24 +18,24 @@
 	"viewScript": "file:./view.js",
 	"keywords": ["portfolio","ae"],
 	"attributes": {
-		"avatarURL": {
+		"projectURL": {
 			"type": "string",
 			"default": "http://place-hold.it/75"
+		},
+		"name": {
+			"type": "string",
+			"source": "html",
+			"selector": ".card-name"
 		},
 		"description": {
 			"type": "string",
 			"source": "html",
-			"selector": ".description"
+			"selector": ".card-description"
 		},
 		"tags": {
 			"type": "string",
-			"default": ""
-		},
-		"name": {
-		"type": "string",
-		"source":"html",
-		"default": ""
-	}
-
+			"source": "html",
+			"selector": ".card-tags"
+		}
 	}
 }

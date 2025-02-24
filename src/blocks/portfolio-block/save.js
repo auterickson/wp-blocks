@@ -5,7 +5,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps } from '@wordpress/block-editor';
-
+import { __ } from '@wordpress/i18n';
 /**
  * The save function defines the way in which the different attributes should
  * be combined into the final markup, which is then serialized by the block
@@ -16,22 +16,22 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 import { RichText, PlainText } from '@wordpress/block-editor';
-export default function save({attributes}) {
+export default function Save({ attributes }) {
+	const { projectURL, name, description, tags } = attributes;
+
 	return (
-		<div {...useBlockProps()}>
+		<div {...useBlockProps.save()} className="portfolio-item">
 			<div className="photo">
-				<img src={attributes.avatarURL} alt={"photo of " + attributes.author}/>
+				<img
+					src={projectURL}
+					alt={name ? `Photo of ${name}` : __('Image representing portfolio item', 'portfolio-block')}
+				/>
+				<div className="card-text">
+					<h3 className="card-name">{name}</h3>
+					{tags && <p className="card-tags">{tags}</p>}
+					<p className="card-description">{description}</p>
+				</div>
 			</div>
-			{attributes.tags && (
-				<p className="card-tags">{attributes.tags}</p>
-			)}
-
-			<RichText.Content tagName="h3" className="card-name" value={attributes.name} />
-
-			<RichText.Content tagName="p" className="card-description" value={attributes.description} />
-
-				<a href="#" className="btn">Check It Out</a>
-
 		</div>
 	);
 }
