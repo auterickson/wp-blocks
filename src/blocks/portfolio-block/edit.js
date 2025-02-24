@@ -36,8 +36,8 @@ export default function Edit({ attributes, setAttributes }) {
 	const { projectURL, name, description, tags } = attributes;
 
 	return (
-		<div {...useBlockProps({className: "is-editor"})}>
-			<div className="photo">
+		<div {...useBlockProps()}>
+			<div className="edit-photo">
 				<MediaUploadCheck>
 					<MediaUpload
 						onSelect={(media) => setAttributes({projectURL: media.sizes.thumbnail.url})}
@@ -63,7 +63,7 @@ export default function Edit({ attributes, setAttributes }) {
 				</MediaUploadCheck>
 			</div>
 
-			<div className="card-text">
+			<div className="edit-card-text">
 				<RichText
 					tagName="h3"
 					className="card-name"
@@ -74,7 +74,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 				<RichText
 					tagName="p"
-					className="card-tags"
+					className="edit-card-tags"
 					value={tags}
 					onChange={(value) => setAttributes({tags: value})}
 					placeholder={__('Enter tags (e.g., HTML, CSS)', 'portfolio-block')}
