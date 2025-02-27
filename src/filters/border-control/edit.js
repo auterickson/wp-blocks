@@ -1,9 +1,10 @@
 import { createHigherOrderComponent } from "@wordpress/compose";
 import { Fragment } from "@wordpress/element";
 import {InspectorControls, PlainText} from "@wordpress/block-editor";
-import { PanelBody, PanelRow, SelectControl } from "@wordpress/components";
+import {ColorPalette, PanelBody, PanelRow, RangeControl, SelectControl} from "@wordpress/components";
 import { addFilter } from "@wordpress/hooks";
 import React from "react";
+import colors from "../../common/colors";
 
 // create a wrapper function which will receive the block we are trying to wrap
 function blockWrapper(WrappedBlock) {
@@ -14,9 +15,11 @@ function blockWrapper(WrappedBlock) {
 
       let divStyles = {
         borderStyle: attributes.bcBorderStyle || "none",
-        borderWidth: "2px",
-        borderColor: "black",
+        borderWidth: (attributes.bcWidth || 0) + 'px',
+        borderRadius: (attributes.bcRadius || 0) + 'px',
+        borderColor: attributes.bcColor || 'black',
         padding: (attributes.bcPadding || 0) + 'px',
+
       };
 
       // don't apply styles if there is no border
@@ -53,6 +56,33 @@ function blockWrapper(WrappedBlock) {
 					</label>
 
 				</PanelRow>
+
+
+					<RangeControl
+						label="Border Width"
+						value={ attributes.bcWidth }
+						onChange={(bcWidth) => setAttributes({bcWidth})}
+						min={ .5 }
+						max={ 5 }
+						step={0.5}
+					/>
+				<RangeControl
+						label="Border Radius"
+						value={ attributes.bcRadius }
+						onChange={(bcRadius) => setAttributes({bcRadius})}
+						min={ 0 }
+						max={ 10 }
+						step={ 1 }
+					/>
+<PanelRow>
+	<ColorPalette
+		colors={colors}
+		value={attributes.bcColor}
+		onChange={bcColor => setAttributes({bcColor})}
+		disableCustomColors={true}
+	/>
+</PanelRow>
+
 
             </PanelBody>
           </InspectorControls>

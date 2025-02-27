@@ -13,6 +13,18 @@ function addBorderAttributes(settings, name) {
     type: "number",
     default: 10,
   };
+  settings.attributes.bcWidth= {
+    type: "number",
+    default: 0.5,
+  };
+  settings.attributes.bcRadius= {
+    type: "number",
+    default: 0,
+  };
+  settings.attributes.bcColor= {
+    type: "string",
+  };
+
 
 
 
