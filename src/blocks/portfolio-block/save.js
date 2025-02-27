@@ -18,7 +18,8 @@ import { __ } from '@wordpress/i18n';
 import { RichText, PlainText } from '@wordpress/block-editor';
 import Card from "../../components/Card";
 export default function Save({ attributes }) {
-	const { projectURL, name, description, tags, backgroundColor, textColor, tagColor } = attributes;
+	const { projectURL, name, description, tags, backgroundColor, textColor, tagColor, showTags } = attributes;
+
 
 	return (
 		<div {...useBlockProps.save()} className="wp-block-ae-portfolio-block portfolio-item">
@@ -26,7 +27,9 @@ export default function Save({ attributes }) {
 				<img src={projectURL} alt={name ? `Photo of ${name}` : 'Portfolio item image'} />
 				<div className="card-text" style={{ backgroundColor, color: textColor }}>
 					<h3 className="card-name">{name}</h3>
-					{tags && <p className="card-tags" style={{ color: tagColor }}>{tags}</p>}
+					<p className="card-tags" style={{ color: tagColor }}>
+						{showTags ? tags : ''}
+					</p>
 					<p className="card-description">{description}</p>
 				</div>
 			</div>
