@@ -32,11 +32,25 @@ import './editor.scss';
 import { RichText, PlainText, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 import { SelectControl} from "@wordpress/components";
 import StarRating from "../../components/StarRating";
+import BlockSettings from "./BlockSettings";
 //export default function Edit(props)
 export default function Edit( {attributes, setAttributes} ) {
-	//build the stars
+	/**
+	 *
+	 * @type CSSProperties
+	 */
+	const divStyles = {
+	//react translates kabob-case to camelCase
+	backgroundColor: attributes.backgroundColor,
+	color: attributes.textColor,
+	}
 	return (
-	<div {...useBlockProps()} >
+	<div {...useBlockProps()}  style={divStyles}>
+		<BlockSettings
+			attributes={attributes}
+			setAttributes={setAttributes}
+		/>
+
 		<StarRating
 					rating={attributes.stars}
 					setRating={stars => setAttributes({stars: parseInt(stars)})}

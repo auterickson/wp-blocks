@@ -23,8 +23,14 @@ export default function save({attributes}) {
 	for(let i = 0; i <attributes.stars; i++) {
 		stars += '★';
 	}
+
+	const divStyles = {
+		//react translates kabob-case to camelCase
+		backgroundColor: attributes.backgroundColor,
+		color: attributes.textColor,
+	}
 	return (
-		<div {...useBlockProps.save()} >
+		<div {...useBlockProps.save()} style={divStyles} >
 			<div className="stars">{ stars }</div>
 			<RichText.Content
 				tagName="div"

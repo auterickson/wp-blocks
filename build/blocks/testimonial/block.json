@@ -39,6 +39,12 @@
     "avatarURL": {
       "type": "string",
       "default": "http://place-hold.it/75"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
     }
   }
 }

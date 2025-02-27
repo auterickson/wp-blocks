@@ -36,6 +36,19 @@
 			"type": "string",
 			"source": "html",
 			"selector": ".card-tags"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"tagColor": {
+			"type": "string"
+		},
+		"showTags": {
+			"type": "boolean",
+			"default": true
 		}
 	}
 }
