@@ -9,6 +9,12 @@ function addBorderAttributes(settings, name) {
     type: "string",
     default: "",
   };
+  settings.attributes.bcPadding = {
+    type: "number",
+    default: 10,
+  };
+
+
 
   // (modify any additional settings)
 
@@ -17,6 +23,6 @@ function addBorderAttributes(settings, name) {
 
 addFilter(
   "blocks.registerBlockType",
-  "your-plugin-name/border-control/add-border-attributes",
+  "ae/border-control/add-border-attributes",
   addBorderAttributes,
 );
