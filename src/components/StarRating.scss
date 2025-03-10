@@ -13,4 +13,8 @@
 			color: gray;
 		}
 	}
+
+	&.readonly .star:hover{
+		cursor: default;
+	}
 }

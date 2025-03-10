@@ -28,5 +28,8 @@
 .stars .star.off {
   color: gray;
 }
+.stars.readonly .star:hover {
+  cursor: default;
+}
 
 /*# sourceMappingURL=index.css.map*/

@@ -25,7 +25,7 @@ if ($query->have_posts()) :
 			$project_image_url = $project_image ? $project_image['url'] : 'https://via.placeholder.com/300';
 			?>
 
-			<div class="project-card" style="background-color: <?= esc_attr($attributes['cardColor'] ?? '#ffffff') ?>;">
+			<div class="project-card" style="background-color: <?= esc_attr(isset($attributes['cardColor']) ? $attributes['cardColor'] : '#ffffff') ?>;">
 				<!-- Project Image -->
 				<div class="project-card-image">
 					<img src="<?= esc_url($project_image_url); ?>" alt="<?= esc_attr(get_the_title()); ?>">
@@ -33,7 +33,7 @@ if ($query->have_posts()) :
 
 				<!-- Project Content -->
 				<div class="project-card-content">
-					<h3 class="name" style="color: <?= esc_attr($attributes['headingColor'] ?? '#000000') ?>"><?= get_the_title(); ?></h3>
+					<h3 class="name" style="color: <?= esc_attr(isset($attributes['headingColor']) ? $attributes['headingColor'] : '#000000') ?>"><?= get_the_title(); ?></h3>
 
 					<!-- View More Button -->
 					<button class="view-more-btn" onclick="openModal(<?= get_the_ID(); ?>)">View More</button>
@@ -44,8 +44,8 @@ if ($query->have_posts()) :
 			<div class="modal" id="modal-<?= get_the_ID(); ?>" style="display: none;">
 				<div class="modal-content">
 					<span class="close-btn" onclick="closeModal(<?= get_the_ID(); ?>)">&times;</span>
-					<h3 class="name" style="color: <?= esc_attr($attributes['headingColor'] ?? '#000000') ?>"><?= get_the_title(); ?></h3>
-					<div class="description" style="color: <?= esc_attr($attributes['textColor'] ?? '#000000') ?>;">
+					<h3 class="name" style="color: <?= esc_attr(isset($attributes['headingColor']) ? $attributes['headingColor'] : '#000000') ?>"><?= get_the_title(); ?></h3>
+					<div class="description" style="color: <?= esc_attr(isset($attributes['textColor']) ? $attributes['textColor'] : '#000000') ?>;">
 						<p><?= esc_html($description); ?></p>
 					</div>
 					<?php if ($technologies) : ?>
