@@ -32,26 +32,28 @@ import ServerSideRender from '@wordpress/server-side-render';
  *
  * @return {Element} Element to render.
  */
-export default function Edit(attributes, setAttributes) {
+export default function Edit({ attributes, setAttributes }) {
 	return (
 		<div {...useBlockProps()}>
-			<BlockSettings attributes={attributes} setAttributes={setAttributes}/>
-			<div className="project-card">
+			<BlockSettings attributes={attributes} setAttributes={setAttributes} />
+
+			{/* Placeholder Preview in Editor */}
+			<div className="project-card" style={{ backgroundColor: attributes.cardColor }}>
 				<div className="project-card-image">
-					<img src="https://2.gravatar.com/avatar/ea8b076b398ee48b71cfaecf898c582b?s=250&d=mm&r=g"/>
+					<img src="https://via.placeholder.com/150" alt="Project Preview" />
 				</div>
 				<div className="project-card-content">
-					<h3 className="name" style={{color: attributes.headingColor}}>Project Name </h3>
-					<div className="description" style={{color: attributes.textColor}}>
-						<p>Project description</p>
-					</div>
-
+					<h3 className="name" style={{ color: attributes.headingColor }}>Project Name</h3>
+					<p className="description" style={{ color: attributes.textColor }}>
+						Project description goes here...
+					</p>
+					<p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+					<a href="#" className="project-link">View Project</a>
 				</div>
 			</div>
-			<ServerSideRender
-				block={metadata.name}
-				attributes={attributes}
-			/>
+
+			{/* Server-Side Rendered Content */}
+			<ServerSideRender block={metadata.name} attributes={attributes} />
 		</div>
 );
 }

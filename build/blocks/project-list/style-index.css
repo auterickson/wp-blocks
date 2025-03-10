@@ -9,8 +9,113 @@
  */
 .wp-block-ae-project-list {
   background-color: #21759b;
-  color: #fff;
+  color: #316815;
   padding: 2px;
+}
+
+/* Basic Styles for the project card */
+.project-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.project-card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+/* Style for the View More button */
+.view-more-btn {
+  display: inline-block;
+  background-color: #0066cc;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #005bb5;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal content styles */
+.project-details {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.project-details a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.project-details a:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .project-card-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/
