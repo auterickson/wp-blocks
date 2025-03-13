@@ -1,0 +1,218 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/portfolio-project-block/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-ae-portfolio-project-block {
+  color: #fff;
+  padding: 2px;
+}
+
+.project-card {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 20px;
+}
+
+.project-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card-img {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  border-radius: 12px 12px 0 0;
+  border-bottom: 4px solid #193719;
+}
+
+.project-card-info {
+  padding: 20px;
+  color: #2c3e50;
+  font-family: "Arial", sans-serif;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.6rem;
+  color: #193719;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.project-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-pill {
+  background-color: #193719;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.project-link {
+  text-decoration: none;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Skeleton Loader Styles */
+.skeleton-card {
+  width: 300px;
+  height: 420px;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skeleton-img {
+  height: 200px;
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.skeleton-text {
+  background-color: #dcdcdc;
+  height: 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.skeleton-tags {
+  background-color: #dcdcdc;
+  height: 15px;
+  border-radius: 4px;
+  width: 50%;
+}
+
+label {
+  font-size: 1rem;
+  color: #193719;
+  font-weight: bold;
+}
+
+input {
+  margin: 15px;
+  padding: 10px;
+  border: 2px solid #1a3d2f;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #2c3e50;
+  background-color: #f4f4f4;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #1a3d2f;
+  box-shadow: 0 0 5px rgba(26, 61, 47, 0.3);
+}
+
+input::-moz-placeholder {
+  color: #7f8c8d;
+}
+
+input::placeholder {
+  color: #7f8c8d;
+}
+
+/* General Styles */
+select, input {
+  font-family: "Arial", sans-serif;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal-close-button {
+  background-color: #1a3d2f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.modal-close-button:hover {
+  background-color: #145c3b;
+}
+
+/* Read More Button */
+.read-more-btn {
+  background-color: transparent;
+  color: #1a3d2f;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.read-more-btn:hover {
+  color: #145c3b;
+}
+
+/* Project Link Button */
+.project-link-button {
+  background-color: #1a3d2f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.project-link-button:hover {
+  background-color: #145c3b;
+}

@@ -55,5 +55,5 @@ export default function Edit({ attributes, setAttributes }) {
 			{/* Server-Side Rendered Content */}
 			<ServerSideRender block={metadata.name} attributes={attributes} />
 		</div>
-);
+	);
 }

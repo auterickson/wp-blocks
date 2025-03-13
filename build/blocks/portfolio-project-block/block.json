@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ae/portfolio-project-block",
+  "version": "0.1.0",
+  "title": "Portfolio Project Block",
+  "category": "design",
+  "icon": "art",
+  "description": "displays project block for portfolio",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "portfolio-project-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

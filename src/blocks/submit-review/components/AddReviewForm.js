@@ -58,7 +58,7 @@ export default function AddReviewForm(props) {
 				max={5}
 				step={1}
 			/>
-		<StarRating rating={rating} setRating={setRating} />
+		<StarRating rating={rating} setRating={setRating} />.
 
 			<TextareaControl
 				label="Review"
